@@ -1,0 +1,68 @@
+
+
+% \input{tekst/cel}
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \section{Kolory}
+% Zarządzenie nr 57/2016 JM Rektora PW definiuje kolory dla poszczególnych grup wydziałów:
+% \begin{itemize}
+%  \item Kolor ,,miętowy'' -- \colorbox{bud}{wydziały ,,budowlane'':}{\color{bud} Architektury, Geodezji i~Kartografii, Inżynierii Lądowej, Instalacji Budowlanych, Hydrotechniki i~Inżynierii Środowiska, Transportu.}
+%  \item Kolor ,,morelowy'' -- \colorbox{mech}{wydziały ,,mechaniczne'':}{\color{mech} Inżynierii Produkcji, Mechaniczny Energetyki i~Lotnictwa, Mechatroniki, Samochodów i~Maszyn Roboczych.}
+%  \item Kolor ,,słoneczny'' -- \colorbox{chem}{wydziały ,,chemiczne'':}{\color{chem} Chemiczny, Inżynierii Chemicznej i~Procesowej, Inżynierii Materiałowej.}
+%  \item Kolor ,,szafirowy'' -- \colorbox{elek}{wydziały ,,elektryczne'':}{\color{elek} Elektryczny, Elektroniki i~Technik Informacyjnych.}
+%  \item Kolor ,,śliwkowy,'' -- \colorbox{mfiz}{wydziały ,,matematyczno-fizyczne'':}{\color{mfiz} Fizyki, Matematyki i~Nauk Informacyjnych.}
+%  \item Kolor ,,wrzosowy'' -- \colorbox{multi}{wydziały ,,multidyscyplinarne'' oraz ,,społeczno-ekonomiczne'':}{\color{multi} Administracji i~Nauk Społecznych, Zarządzania, Budownictwa,~Mechaniki i~Petrochemii; Kolegium Nauk Ekonomicznych i~Społecznych.}
+% \end{itemize}
+
+
+% % Rysunek przy użyciu tikz
+% \begin{figure}[!ht]
+%     \centering
+% 	\resizebox*{0.618\linewidth}{!}{%
+%         \begin{tikzpicture}every node/.append style = {anchor=center}
+%             \filldraw[fill=EEBlue] (-0.5,-0.25) rectangle (10.5,8.75);
+%             \fill[EEBlueLight] (0,7.5) rectangle (10,8.5);
+%             % duża przerwa
+%             \fill[EEBlueDark] (0,5.5) rectangle (10,6.5);
+%             \fill[EEOrange] (0,4.25) rectangle (10,5.25);
+%             \fill[EETangerine] (0,3) rectangle (10,4);
+%             \fill[EEGold] (0,2) rectangle (10,3);
+%             \fill[EEAzure] (0,1) rectangle (10,2);
+%             \fill[EEUltramarine] (0,0) rectangle (10,1);
+%             \node at (5,7.90) {\large \textcolor{EEBlueDark}{EEBlueLight} \#e2ecf8};
+%             \node at (5,6.90) {\large \textcolor{EEBlueDark}{EEBlue} \#8ba5d3};
+%             \node at (5,5.90) {\large \textcolor{EEBlueLight}{EEBlueDark} \#45536a};
+%             \node at (5,4.65) {\large \textcolor{EEBlueDark}{EEOrange} \#f6a307};
+%             \node at (5,3.40) {\large \textcolor{EEBlueDark}{EETangerine} \#ff7700};
+%             \node at (5,2.40) {\large \textcolor{EEBlueDark}{EEGold} \#ffd100};
+%             \node at (5,1.40) {\large \textcolor{EEBlueLight}{EEAzure} \#0088ff};
+%             \node at (5,0.40) {\large \textcolor{EEBlueLight}{EEUltramarine} \#002eff};
+%         \end{tikzpicture}
+% 	}
+%     \caption{Próbka zdefiniowanych kolorów}
+%     \label{rys:colorsample}
+% \end{figure}
+
+% Bladopomarańczowy kolor nazwany \textcolor{EEOrange}{EEOrange} jest dopełniającym dla podstawowego koloru wydziałowego EEBlue. Ton ten leży po przeciwnej stronie koła barw niż ton podstawowy a~więc tworzy z~nim silny kontrast. Może to dawać bardzo dobry lub bardzo kiepski efekt. Ponadto dla osób z~całkowitym daltonizmem te dwie barwy mogą być trudno odróżnialne. Dlatego warto rozważyć jej łączenie z~tonem jaśniejszym lub ciemniejszym barwy podstawowej.
+
+% Dodatkowo zdefiniowana jest tetrada barw uzupełniających, która w~połączeniu z~barwą podstawową lub jej odcieniami może dać dobry efekt wizualny. Te barwy to:
+% \begin{itemize}
+%     \item \colorbox{EETangerine}{mandarynkowy} -- \textcolor{EETangerine}{EETangerine} (EETangerine),
+%     \item \colorbox{EEGold}{złoty} --  \textcolor{EEGold}{EEGold} (EEGold),
+%     \item \colorbox{EEAzure}{lazurowy} --  \textcolor{EEAzure}{EEAzure} (EEAzure),
+%     \item \colorbox{EEUltramarine}{\textcolor{white}{ultramaryna}} --  \textcolor{EEUltramarine}{EEUltramarine} (EEUltramarine).
+% \end{itemize}
+% Barwy mandarynkowa i~złota mogą się dobrze kojarzyć z~barwami loga Wydziału Elektrycznego.
+
+% W pracy dyplomowej użycie barw powinno być bardzo ograniczone i~dobrze przemyślane. Kolory silnie kontrastowe, szczególnie ciepłe barwy pomarańczowo-żółte w~zestawieniu z~zimną barwą podstawową Wydziału Elektrycznego należy używać nadzwyczaj ostrożnie aby nie uzyskać niepoważnego, ,,choinkowego'' efektu.
+
+% \subsection{Kompilowanie lokalnie}
+% Darmowy dostęp do Overleaf zapewnia czas każdej kompilacji nie dłuższy niż 1 minuta. W~przypadku skomplikowanej pracy czas ten może zostać przekroczony i~wówczas Overleaf nie wygeneruje pliku wynikowego. Dlatego warto rozważyć pobranie szablonu na własny komputer z~zainstalowanym \XeLaTeX{em}. Kompilacja może wówczas wyglądać tak, jak na listingu~\ref{lst:kompilacja}.
+
+% \begin{lstlisting}[language=bash,
+%     caption={Kompilacja pracy dyplomowej lokalnie},
+%     label={lst:kompilacja}]
+% xelatex EE-dyplom && biber EE-dyplom && makeglossaries EE-dyplom && xelatex EE-dyplom && xelatex EE-dyplom
+% \end{lstlisting}
+
+% Polecenie \textbf{xelatex} można zastąpić przez \textbf{pdflatex} ale nie jest to zalecane.

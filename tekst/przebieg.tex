@@ -1,0 +1,254 @@
+\section{Przegląd rozwiązań mechanicznych} \label{sec:przeglad_mech}
+
+Przegląd rozwiązań został rozpoczęty od wyszukania rozwiązań umożliwiających sterowanie kamerą umieszczoną na BSP. Rozwiązaniem, które spełniało te wymagania, było \cite{medlin}. Było to proste rozwiązanie open source, używające serwa z prostym mechanizmem do sterowania pochyleniem kamery. Poniżej przedstawione zostały gimbale \textit{Medlin Drone} w wersjach z serwem ustawionym pionowo oraz poziomo.
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includegraphics[width=1.0\textwidth]{rysunki/zdjecia/medlin1.png}
+        \caption{Gimbal Medlin z kamerą \textit{GoPro}, z serwem zamontowanym pionowo}
+    \end{minipage}\hfill
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includegraphics[width=1.0\textwidth]{rysunki/zdjecia/medlin2.png} 
+        \caption{Gimbal Medlin z kamerą \textit{GoPro}, z serwem zamontowanym poziomo}
+    \end{minipage}
+\end{figure}
+
+Na powyższej stronie znajdują się również rozwiązania z paskiem zębatym, zamiast mechanizmu opartego na popychaniu dźwigni połączonej z kamerą. Takie rozwiązanie zostało przedstawione poniżej.
+
+\begin{figure} [H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{rysunki/zdjecia/gimbalzeby.png}
+    \caption{Gimbal Medlin z kamerą \textit{GoPro}, z paskiem zębatym}
+\end{figure}
+
+Kolejnym rozwiązaniem znalezionym w internecie było \cite{gimbaldiy}. Przedstawione zostało na poniższym zdjęciu.
+
+\begin{figure} [H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{rysunki/zdjecia/diygimbal.png}
+    \caption{Gimbal dwuosiowy, używający silników \textit{BLDC}}
+\end{figure}
+
+To rozwiązanie było znacznie bardziej zaawansowane, wymagało bowiem użycia silników \textit{BLDC} oraz enkoderów, a także napisania sterownika do silników. 
+
+\newpage
+\section{Przegląd rozwiązań algorytmów wizyjnych} \label{sec:przeglad_wiz}
+
+W tym podrozdziale przeanalizowane zostały gotowe algorytmy służące do analizy obrazu. Do obsługi kamery została wykorzystana biblioteka \texttt{opencv}.
+
+Najpierw przeanalizowany został algorytm \texttt{yolov4}. Pliki konieczne do uruchomienia, czyli: \begin{itemize}
+    \item \texttt{yolov4.weights}
+    \item \texttt{yolov4.cfg}
+    \item \texttt{coco.names}
+\end{itemize}
+zostały zaczerpnięte z \cite{yolo}. Poniżej przedstawione zostały zrzuty ekranu wykonane podczas działania programu.
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includegraphics[width=1.0\textwidth]{rysunki/twarz/yolov4_1.png}
+        \caption{Wykryta osoba oraz szklanka}
+    \end{minipage}\hfill
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includegraphics[width=1.0\textwidth]{rysunki/twarz/yolov4_2.png} 
+        \caption{Wykryta osoba oraz telefon}
+    \end{minipage}
+\end{figure}
+
+Program działał bardzo powoli, wykonywała się 1 pętla programu na kilka sekund. Takie działanie programu uniemożliwiało śledzenie obiektów z dostateczną dokładnością.
+
+Następnie przeanalizowany został algorytm \texttt{yolov4-tiny}. Pliki konieczne do uruchomienia, a więc: 
+\begin{itemize}
+    \item \texttt{yolov4-tiny.weights}
+    \item \texttt{yolov4-tiny.cfg}
+\end{itemize}
+zostały pobrane analogicznie jak wyżej. Poniżej przedstawione zostały zrzuty ekranu wykonane podczas działania programu.
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includegraphics[width=1.0\textwidth]{rysunki/twarz/tiny1.png}
+        \caption{Wykryte dwie osoby}
+    \end{minipage}\hfill
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includegraphics[width=1.0\textwidth]{rysunki/twarz/tiny2.png} 
+        \caption{Wykryta osoba}
+    \end{minipage}
+\end{figure}
+
+Na powyższych zrzutach widać, że sieć nie radzi sobie z rozpoznawaniem przedmiotów, które nie są ludźmi -- \texttt{yolov4-tiny} określa telefon komórkowy mianem \textit{person}, czyli osoby. Program działał w tym przypadku znacznie płynniej. Takie działanie programu mogłoby umożliwić śledzenie obiektów w czasie rzeczywistym.
+
+Ostatnim algorytmem były kaskady Haara, zaczerpnięte z \cite{opencv}. Poniżej przedstawione zostały zrzuty ekranu wykonane podczas działania programu.
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includegraphics[width=1.0\textwidth]{rysunki/twarz/haar1.png}
+        \caption{Wykryta twarz}
+    \end{minipage}\hfill
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includegraphics[width=1.0\textwidth]{rysunki/twarz/haar2.png} 
+        \caption{Twarz wykryta pod innym kątem}
+    \end{minipage}
+\end{figure}
+
+Powyższy algorytm działał zdecydowanie najwydajniej z wyżej opisanych. Jego implementacja pozwoliłaby na bezproblemowe śledzenie obiektów w czasie rzeczywistym.
+
+\newpage
+\section{Przegląd rozwiązań rynkowych}
+
+Na rynku komercyjnym działa firma DJI -- firma zajmująca się produkcją dronów zintegrowanych z gimbalami. Rozwiązania tej firmy stosowane są popularnie w branży filmowej. Mają wbudowane algorytmy m. in. \begin{itemize}
+    \item śledzenia
+    \item unikania przeszkód
+    \item nagrywania inteligentnych ujęć
+\end{itemize}
+
+Poniżej przedstawiony został przykładowy produkt tej firmy.
+
+\begin{figure} [H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{rysunki/zdjecia/djiair3.jpg}
+    \caption{Dron DJI Air 3}
+\end{figure}
+
+Podobne rozwiązania funkcjonują na rynku zbrojeniowym. Są one oczywiście rozwinięte o funkcjonalności pozwalające na wyrządzenie zniszczeń. Firmą zajmującą się takimi rozwiązaniami jest Anduril. Ich dron Bolt pozwala na autonomiczne śledzenie i detonację w pobliżu celu, z wybranego przez użytkownika kąta. Poniżej przedstawiony został \gls{BSP} tej firmy.
+
+\begin{figure} [H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{rysunki/zdjecia/andurilbolt.png}
+    \caption{Dron Anduril Bolt}
+\end{figure}
+
+\textit{nie wiem czy pisać o głowicach tu}
+
+\newpage
+\section{Przebieg pracy}
+
+W tej sekcji opisany został przebieg pracy oraz dokonane eksperymenty.
+
+\subsection{Założenia}
+
+Celem projektu był system możliwy do zintegrowania z bezzałogowym statkiem powietrznym. Musiał więc być:
+
+\begin{itemize}
+    \item niewielki
+    \item lekki
+    \item wydajny
+\end{itemize}
+
+Dodatkowym atutem była oczywiście niska cena dobranych komponentów.
+
+\subsection{Dobór komponentów}
+
+Postawione wymagania wymusiły wybór konkretnych komponentów. Dobrane zostały:
+
+\begin{itemize}
+    \item Raspberry Pi 5
+    \item Kamera światła widzialnego z obiektywem \texttt{IR 3MP 3.6mm, 1/2.5"}
+    \item Serwo \texttt{MG-996R}
+    \item Płytka \texttt{STM32F411E-Disco}
+\end{itemize}
+
+\subsection{Mechanika}
+
+Prace rozpoczęte zostały od zamodelowania uchwytu na kamerę, pozwalającego na śledzenie wykrytych obiektów. Zamodelowany został prosty gimbal jednoosiowy, którego napędem było wymienione powyżej serwo. Programem wykorzystanym do tego celu był \textit{Fusion 360}. Części modelowane były tak, aby umożliwić łatwe wytworzenie technologią 3D.
+
+Gimbal został dostosowany do montażu do ramy drona \textit{TBS Source One}, przedstawionej poniżej.
+
+\begin{figure} [H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{rysunki/zdjecia/tbscut.jpg}
+    \caption{Rama TBS Source One}
+\end{figure}
+
+Poniżej przedstawione zostały zdjęcia modelu 3D uchwytu na kamerę. Część ta składa się z dwóch mniejszych części, aby ułatwić wydruk 3D. Rozstaw śrub został dostosowany do rozstawu śrub znajdujących się w uchwycie na kamerę, wykonanym przez innego członka koła naukowego.
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includegraphics[width=1.0\textwidth]{rysunki/zdjecia/cammount1.png}
+        \caption{Uchwyt na kamerę w pierwszym rzucie}
+    \end{minipage}\hfill
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includegraphics[width=1.0\textwidth]{rysunki/zdjecia/cammount2.png} 
+        \caption{Uchwyt na kamerę w drugim rzucie}
+    \end{minipage}
+\end{figure}
+
+Poniżej przedstawione zostało mocowanie serwa oraz część umożliwiająca łożyskowanie uchwytu na kamerę.
+
+\begin{figure} [H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{rysunki/zdjecia/servomnt1.png}
+    \caption{Mocowanie serwa oraz tuleja do łożyskowania uchwytu na kamerę}
+\end{figure}
+
+Poniżej przedstawione zostało łożyskowanie gimbala (mocowania kamery do uchwytu na serwo). Użyta została śruba pasowana \texttt{ISO 7379-6-M5-30} oraz dwa łożyska \texttt{686 2Z 6x13x5}.
+
+\begin{figure} [H]
+    \centering
+    \includegraphics[width=0.75\linewidth]{rysunki/zdjecia/lozyskowanie.png}
+    \caption{Łożyskowanie gimbala}
+\end{figure}
+
+Gimbal zostanie zamocowany śrubami, które trzymają tuleje dystansowe w ramie, do której zostanie zamocowany. Poniżej przedstawione zostało pełne złożenie gimbala.
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includegraphics[width=1.0\textwidth]{rysunki/zdjecia/gimbalmoj1.png}
+        \caption{Złożenie gimbala z serwem w pierwszym rzucie}
+    \end{minipage}\hfill
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includegraphics[width=1.0\textwidth]{rysunki/zdjecia/gimbalmoj2.png} 
+        \caption{Złożenie gimbala z serwem w drugim rzucie}
+    \end{minipage}
+\end{figure}
+
+Poniżej przedstawione zostało zdjęcie wydrukowanego i złożonego gimbala.
+\begin{figure} [H]
+    \centering
+    \includegraphics[width=0.4\linewidth]{rysunki/zdjecia/gimbaldruk.jpg}
+    \caption{Złożenie wydrukowanego gimbala}
+\end{figure}
+
+\subsection{Integracja}
+
+% \subsubsection{Firmware}
+
+W pierwszej kolejności wykonane zostały próby uruchomienia sterowania serwomechanizmem bezpośrednio przy użyciu komputera Raspberry Pi. Rezultaty były jednak niezadowalające: \begin{itemize}
+    \item serwo nie działało płynnie -- obecne były spore drgania po zrealizowaniu zadanego kąta
+    \item niemożliwe okazało się zadawanie małych uchybów -- kąty musiały się różnić o co najmniej 5-10 stopni, w przeciwnym razie serwo nie zmieniało swojej pozycji
+\end{itemize} 
+
+Podjęta została decyzja o zaniechaniu prób uruchomienia sterowania serwem na Raspberry Pi. Zamiast tego, użyty został mikrokontroler \texttt{STM32F411E-Disco}. Komputer Raspberry Pi został więc użyty jedynie do wysyłania kąta zadanego do zrealizowania przez sterownik serwa. 
+
+Uchyb wyliczany był na podstawie odległości środka twarzy wykrytej przez algorytm kaskad Haara od środka obrazu z kamery. Uchyb ten przemnażany był następnie przez stałą $K_p$ i dodawany do aktualnej wartości kąta, a następnie wysyłany do sterownika serwa przez \texttt{UART}. Była to imitacja regulacji w pętli zamkniętej z regulatorem $P$.
+
+Kąt do zrealizowania był następnie obsłużony w przerwaniu na mikrokontrolerze \texttt{STM32} i generowany był sygnał \texttt{PWM}. Tym razem serwo zachowywało się bez zarzutu. Umożliwiło to integrację systemu oraz zamknięcie pętli sterowania: \begin{enumerate}
+    \item otrzymany z kamery obraz był przetwarzany algorytmem kaskad Haara
+    \item obliczany był uchyb -- odległość pomiędzy środkiem obrazu, a środkiem obszaru wyznaczającego twarz w osi pionowej (jest to gimbal jednoosiowy)
+    \item przy użyciu regulatora $P$ wyznaczany był kąt do zrealizowania przez serwo
+    \item kąt był wysyłany przez \texttt{UART} do mikrokontrolera \texttt{STM32}
+    \item serwo po odebraniu kąta wysyłało do serwa sygnał \texttt{PWM}
+    \item serwo realizowało zadany kąt, zbliżając środek wykrytej twarzy do środka sceny kamery
+\end{enumerate} 
+
+Zasilanie do serwa zostało zrealizowane za pomocą zasilacza laboratoryjnego, co będzie musiało w przyszłości zostać zastąpione mniejszym, kompaktowym źródłem prądu.
+W przyszłości kontroler \texttt{STM32F411E-Disco} powinien również zostać zastąpiony bardziej kompaktowym kontrolerem -- np \texttt{STM32F411 Blackpill}. Model \texttt{E-Disco} został bowiem użyty ze względu na prostotę użycia -- ma wbudowany \texttt{ST-Link}, umożliwiający wgrywanie programów, zasilanie oraz debug. Jest to doskonała platforma do testów oprogramowania, ponieważ zawiera sporo portów \texttt{GPIO} oraz diod, które umożliwiają sprawdzenie, czy np. komendy wykonywane są z odpowiednią częstotliwością (przykładem może być odbiór kąta przez \texttt{UART}).
+% \subsubsection{Software}
+
+% Opisać: stm32, uart, przerwania, rpi, haar, regulator P, generowanie pwm

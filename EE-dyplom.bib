@@ -1,0 +1,530 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Typy bibliografii:
+%  - artykuł z czasopisma,
+%  - artykuł z konferencji,
+%  - materiały konferencyjne,
+%  - książka,
+%  - fragment książki,
+%  - książka z serii,
+%  - krótka broszura,
+%  - praca magisterska,
+%  - praca doktorska,
+%  - instrukcja obsługi,
+%  - raport techniczny,
+%  - materiały nieopublikowane,
+%  - inne typy materiałów źródłowych.
+% Więcej informacji na stronie https://www.bibtex.com/
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Artykuły naukowe z czasopism i konferencji
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Article - artykuł z czasopisma.
+% Wymagane pola: author, title, journal, year.
+% Opcjonalne pola: volume, number, pages, month, note.
+@Article{maxwell1865,
+    author  = {James Clerk Maxwell},
+    title   = {A Dynamical Theory of the Electromagnetic Field},
+    journal = {Philosophical Transactions of the Royal Society},
+    year    = {1865},
+    number  = {155},
+    pages   = {459-512},
+    month   = {1},
+    note    = {\href{https://royalsocietypublishing.org/doi/pdf/10.1098/rstl.1865.0008}{<https://royalsocietypublishing.org/doi/pdf/10.1098/rstl.1865.0008>}, dostęp uzyskano 2020-12-03},
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% InProceedings - artykuły z konferencji
+% Wymagane pola: author or editor, title, publisher, year.
+% Opcjonalne pola: volume or number, series, address, edition, month, note.
+@inproceedings{cichon1995,
+    author  = {D. J. {Cichon} and W. {Wiesbeck}},
+    title   = {The Heinrich Hertz wireless experiments at Karlsruhe in the view of modern communication},
+    publisher   = {Institution of Engineering and Technology},
+    year        = {1995},
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Proceedings - publikacja pokonferencyjna, zbiór artykułów z jednej konferencji
+% Wymagane pola: title, year.
+% Opcjonalne pola: editor, volume or number, series, address, publisher, note, month, organization.
+@proceedings{cpee2018,
+    title   = {19th International Conference Computational Problems of Electrical Engineering},
+    year    = {2018},
+    note    = {doi: \href{https://doi.org/10.1109/CPEE44871.2018}{10.1109/CPEE44871.2018}},
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Materiały książkowe
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Book - książka mająca wydawcę.
+% Wymagane pola: author or editor, title, publisher, year.
+% Opcjonalne pola: volume or number, series, address, edition, month, note.
+@book{fowler2009,
+    author    = {Kim Fowler},
+    title     = {Mission-Critical and Safety-Critical Systems Handbook: Design and Development for Embedded Applications},
+    publisher = {Newnes},
+    year      = {2009},
+    ISBN      = {978-0750685672},
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Inbook - część książki, na przykład rozdział i/lub zakres stron.
+% Wymagane pola: author lub editor, title, chapter i/lub pages, publisher, year.
+% Opcjonalne pola: volume or number, series, type, address, edition, month, note.
+@inbook{leksinski1995,
+  chapter   = {1-2},
+  pages     = {9-232},
+  title     = {Matematyka},
+  publisher = {Wydawnictwa Naukowo-Techniczne},
+  year      = {1995},
+  author    = {Wojciech Żakowski and Wacław Leksiński},
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Incollection - część książki mająca własny tytuł, również książka z serii.
+% Wymagane pola: author, title, booktitle, publisher, year.
+% Opcjonalne pola: editor, volume or number, series, type, chapter, pages, address, edition, month, note.
+@incollection{lncsevo,
+  author    = {Gyu Myoung Lee and Noel Crespi and Jun Kyun Choi and Matthieu Boussard},
+  title     = {Internet of Things},
+  booktitle = {Evolution of Telecommunication Services},
+  series    = {Lecture Notes in Computer Science},
+  publisher = {Springer-Verlag Berlin Heidelberg},
+  year      = {2013},
+  editor    = {Emmanuel Bertin and Noel Crespi and Thomas Magedanz},
+  volume    = {7768},
+  isbn      = {978-3642415685},
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Booklet - praca, która została wydrukowana i oprawiona ale nie mająca wydawcy lub stojącej za nią instytucji, broszurka mająca 4-48 stron
+% Wymagane pola: title.
+% Opcjonalne pola: author, howpublished, address, month, year, note.
+@booklet{giglio,
+  author = {Pierluigi Giglio},
+  title  = {Postmodernism and Plagiarism},
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% MastersThesis - praca magisterska (uwaga: masters a nie master)
+% Wymagane pola: author, title, school, year.
+% Opcjonalne pola: type, address, month, note.
+@mastersthesis{poirier2020,
+    author  = {Izabela Poirier},
+    title   = {Wykorzystanie technologii Blockchain w komunikacji urządzeń Internetu Rzeczy},
+    school  = {Politechnika Warszawska, Wydział Elektryczny, Instytut Elektrotechniki Teoretycznej i Systemów Informacyjno-Pomiarowych},
+    year    = {2020},
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% phdthesis - praca doktorska
+% Wymagane pola: author, title, school, year.
+% Opcjonalne pola: type, address, month, note.
+@phdthesis{truong2018,
+    author  = {Nguyen Binh Truong},
+    title   = {Evaluation of trust in the Internet of Things : models, mechanisms and applications},
+    school  = {Liverpool John Moores University},
+    year    = {2018},
+    note    = {doi: \href{http://doi.org/10.24377/researchonline.ljmu.ac.uk.00009241}{10.24377/researchonline.ljmu.ac.uk.00009241}}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Dokumenty techniczne
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% manual - instrukcja obługi, specyfikacja techniczna, nota katalogowa (datasheet)
+% Wymagane pola: title.
+% Opcjonalne pola: author, organization, address, edition, month, year, note.
+@manual{AN4230,
+    title           = {STM32 microcontroller random number generation validation using the NIST statistical test suite},
+    organization    = {STMicroelectronics},
+    year            = {2020},
+    month           = {8},
+    note            = {AN4230},
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% techreport - raport techniczny
+% Wymagane pola: author, title, institution, year.
+% Opcjonalne pola: type, number, address, month, note.
+@techreport{nask2020,
+    author      = {{Zespół CERT Polska}},   % Nietypowy autor - dodatkowe nawiasy powodują, że nie zostanie uznany za imię i nazwisko co byłoby komiczne (Polska Z. C.)
+    title       = {Krajobraz bezpieczeństwa polskiego Internetu w 2019 roku},
+    institution = {NASK -- Państwowy Instytut Badawczy},
+    year        = {2020},
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Dokumenty nietypowe
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% unpublished - dokument mający autora i tytuł ale nie opublikowany typowymi metodami
+% Wymagane pola: author, title, note.
+% Opcjonalne pola: month, year.
+@unpublished{wilamowski2017,
+  author    = {Maciej Wilamowski},
+  title     = {,,Daj, ać ja pobruczę, a ty poczywaj''. Pierwsze zdanie po polsku w historii},
+  note    = {\href{https://twojahistoria.pl/2017/11/21/daj-ac-ja-pobrucze-a-ty-poczywaj-co-powinienes-wiedziec-o-pierwszym-zdaniu-zapisanym-w-jezyku-polskim/}{<https://twojahistoria.pl/2017/11/21/daj-ac-ja-pobrucze-a-ty-poczywaj-co-powinienes-wiedziec-o-pierwszym-zdaniu-zapisanym-w-jezyku-polskim/>}, dostęp uzyskano 2020-12-03},
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% misc - jeśli wszystkie inne kategorie nie pasują; przynajmniej jedno z pól opcjonalnych musi być użyte
+% Wymagane pola: brak
+% Opcjonalne pola: author, title, howpublished, month, year, note.
+@misc{szablon,
+    author  = {Łukasz Makowski},
+    title   = {Szablon prac dyplomowych dla Wydziału Elektrycznego Politechniki Warszawskiej},
+    howpublished    = {\href{https://github.com/SP5LMA/EE-Dyplom}{<https://github.com/SP5LMA/EE-Dyplom>}},
+}
+
+
+%% moje 
+
+@misc{medlin,
+    author = {{\relax Medlin Drone}},
+    title = {Strona poświęcona jednoosiowym gimbalom mocowanym do dronów, wykonywanych technologią druku 3D},
+    year = {2025},
+    month = {01},
+    url = {https://medlindrone.com/}
+}
+
+@misc{gimbaldiy,
+    author = {JeanLeFlambeur},
+    title = {Blog dotyczący wykonania gimbala dwuosiowego technologią druku 3D},
+    howpublished = {\url{https://diydrones.com/profiles/blogs/3d-printable-gimbal-for-raspberrypi-camera}},
+    note = {Dostęp: 01/2025},
+    year = {2016}
+}
+
+@misc{yolo,
+    author = {AlexeyAB},
+    title = {Repozytorium zawierające konieczne konfiguracje umożliwiające działanie algorytmów YOLO},
+    year = {2025},
+    month = {01},
+    publisher = {GitHub},
+    url = {https://github.com/AlexeyAB/darknet/tree/master}
+}
+
+@misc{opencv,
+    author = {{\relax Open source}},
+    title = {Biblioteka funkcji programistycznych służących głównie do przetwarzania wizji komputerowej w czasie rzeczywistym},
+    year = {2025},
+    month = {01},
+    url = {https://github.com/opencv/opencv}
+}
+
+@book{kinematyka2008,
+    author    = {J. Frączek and M. Wojtyra},
+    title     = {Kinematyka układów wieloczłonowych: metody obliczeniowe.},
+    publisher = {Warszawa: Wydawnictwa Naukowo-Techniczne},
+    year      = {2008},
+    ISBN      = {9788320433340},
+}
+
+@book{graf2016pid,
+  title={PID Control Fundamentals},
+  author={Graf, J.},
+  isbn={9781535358668},
+  url={https://books.google.pl/books?id=kMoEvgAACAAJ},
+  year={2016},
+  publisher={CreateSpace Independent Publishing Platform}
+}
+
+@book{prata2013język,
+  title={J{\k{e}}zyk C++. Szko{\l}a programowania. Wydanie VI},
+  author={Prata, S.},
+  isbn={9788324643363},
+  url={https://books.google.pl/books?id=GmZ6xMRYUdwC},
+  year={2013},
+  publisher={Wydawnic wtwo Helion}
+}
+
+@book{stroustrup2022tour,
+  title={A Tour of C++},
+  author={Stroustrup, B.},
+  isbn={9780136816485},
+  lccn={2022938722},
+  series={C++ in-depth series},
+  url={https://books.google.pl/books?id=H1Z5zQEACAAJ},
+  year={2022},
+  publisher={Addison-Wesley}
+}
+
+@misc{implot,
+    author  = {epezent},
+    title   = {implot},
+    year    = {2023},
+    month   = {12},
+    publisher = {GitHub},
+    journal = {GitHub repository},
+    howpublished    = {\href{https://github.com/epezent/implot}},
+    url = {https://github.com/epezent/implot},
+    commit = {1f7a8c0}
+}
+
+
+
+@misc{imgui,
+    author  = {ocornut},
+    title   = {imgui},
+    year    = {2023},
+    month   = {12},
+    publisher = {GitHub},
+    journal = {GitHub repository},
+    howpublished    = {\href{https://github.com/ocornut/imgui}},
+    url = {https://github.com/ocornut/imgui},
+    commit = {0d582da},
+}
+
+@misc{raylib,
+    author  = {raysan5},
+    title   = {raylib},
+    year    = {2023},
+    month   = {12},
+    publisher = {GitHub},
+    journal = {GitHub repository},
+    howpublished    = {\href{https://github.com/raysan5/raylib}},
+    url = {https://github.com/raysan5/raylib},
+    commit = {fd84ab3}
+}
+
+@misc{olliw,
+    author  = {OlliW},
+    title   = {Camera Gimbals: A Robotics Approach},
+    howpublished    = {\href{http://www.olliw.eu/2018/camera-gimbals-a-robotics-approach/}},
+}
+
+
+@techreport{losKinematics,
+    author      = {James M. Hilkert},
+    title       = {Line-of-Sight Kinematics and Corrections for FastSteering Mirrors used in Precision Pointing and
+Tracking Systems},
+    institution = {UT Dallas},
+    year        = {2014},
+}
+
+@Article{turkishlos,
+    author  = {OĞUZHAN ÇİFDALÖZ},
+    title   = {Line-of-sight rate construction for a roll-pitch gimbal via a virtualpitch-yaw gimbal},
+    journal = {The Turkish Journal of Electrical Engineering \& Computer Sciences},
+    volume  = {29},
+    year    = {2021},
+    number  = {5},
+    pages   = {2502-2519},
+    month   = {1},
+    note    = {\href{https://doi.org/10.3906/elk-2010-121}},
+}
+
+@book{siciliano2010robotics,
+  title={Robotics: Modelling, Planning and Control},
+  author={Siciliano, B. and Sciavicco, L. and Villani, L. and Oriolo, G.},
+  isbn={9781846286414},
+  lccn={2008939574},
+  series={Advanced Textbooks in Control and Signal Processing},
+  url={https://books.google.pl/books?id=jPCAFmE-logC},
+  year={2010},
+  publisher={Springer London}
+}
+
+@book{spong2020robot,
+  title={Robot Modeling and Control},
+  author={Spong, M.W. and Hutchinson, S. and Vidyasagar, M.},
+  isbn={9781119523994},
+  lccn={2019055413},
+  url={https://books.google.pl/books?id=DdjNDwAAQBAJ},
+  year={2020},
+  publisher={Wiley}
+}
+
+@book{brown1997introduction,
+  title={Introduction to Random Signals and Applied Kalman Filtering with Matlab Exercises and Solutions},
+  author={Brown, R.G. and Hwang, P.Y.C.},
+  isbn={9780471128397},
+  lccn={96025880},
+  series={Introduction to Random Signals and Applied Kalman Filtering: With MATLAB Exercises and Solutions},
+  url={https://books.google.pl/books?id=De9SAAAAMAAJ},
+  year={1997},
+  publisher={Wiley}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Nowe wpisy dodane na podstawie przeglądu literatury
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% --- Przeglądy i artykuły ogólne ---
+
+@article{bsp_autonomy_review,
+author = {Giones, Ferran and Brem, Alexander},
+year = {2017},
+month = {11},
+pages = {875-884},
+title = {From Toys to Tools: The Co-Evolution of Technological and Entrepreneurial Developments in the Drone Industry},
+volume = {60},
+journal = {Business Horizons},
+doi = {10.1016/j.bushor.2017.08.001}
+}
+
+@article{bsp_constraints_review,
+title = {Energy consumption models for delivery drones: A comparison and assessment},
+journal = {Transportation Research Part D: Transport and Environment},
+volume = {90},
+pages = {102668},
+year = {2021},
+issn = {1361-9209},
+doi = {https://doi.org/10.1016/j.trd.2020.102668},
+url = {https://www.sciencedirect.com/science/article/pii/S1361920920308531},
+author = {Juan Zhang and James F. Campbell and Donald C. {Sweeney II} and Andrea C. Hupman},
+keywords = {Unmanned aerial vehicle, UAV, Drone, Drone energy models, Energy consumption, Parcel delivery}
+}
+
+@article{bsp_vision_challenges,
+title = {A review on object detection in unmanned aerial vehicle surveillance},
+journal = {International Journal of Cognitive Computing in Engineering},
+volume = {2},
+pages = {215-228},
+year = {2021},
+issn = {2666-3074},
+doi = {https://doi.org/10.1016/j.ijcce.2021.11.005},
+url = {https://www.sciencedirect.com/science/article/pii/S2666307421000267},
+author = {Anitha Ramachandran and Arun Kumar Sangaiah},
+keywords = {Object detection, UAV, Drone, Deep learning, Precision agriculture, Security}
+}
+
+@article{bsp_vibration_impact,
+doi = {10.1088/1361-6501/ad9941},
+url = {https://dx.doi.org/10.1088/1361-6501/ad9941},
+year = {2024},
+month = {12},
+publisher = {IOP Publishing},
+volume = {36},
+number = {1},
+pages = {015137},
+author = {Guo, Cui and Ji, Yue and Liu, Yuhe and Zheng, Haitao and Li, Jinyi and Cao, Huiliang},
+title = {Restoration of UAV image blurring based on inertial measurement unit},
+journal = {Measurement Science and Technology}
+}
+
+
+@article{classic_detection_review,
+  author    = {Dollar, Piotr and Wojek, Christian and Schiele, Bernt and Perona, Pietro},
+  title     = {Pedestrian Detection: An Evaluation of the State of the Art},
+  journal   = {IEEE Transactions on Pattern Analysis and Machine Intelligence},
+  volume    = {34},
+  number    = {4},
+  pages     = {743--761},
+  year      = {2012},
+  publisher = {IEEE},
+  doi       = {10.1109/TPAMI.2011.155}
+}
+
+@article{dl_detection_review,
+  author    = {Zhao, Zhong-Qiu and Zheng, Peng and Xu, Shou-tao and Wu, Xindong},
+  title     = {Object Detection With Deep Learning: A Review},
+  journal   = {IEEE Transactions on Neural Networks and Learning Systems},
+  volume    = {30},
+  number    = {11},
+  pages     = {3212--3232},
+  year      = {2019},
+  publisher = {IEEE},
+  doi       = {10.1109/TNNLS.2018.2876865}
+}
+
+@article{tracking_review,
+  title = {Overview and methods of correlation filter algorithms in object tracking},
+  volume = {7},
+  ISSN = {2198-6053},
+  url = {http://dx.doi.org/10.1007/s40747-020-00161-4},
+  DOI = {10.1007/s40747-020-00161-4},
+  number = {4},
+  journal = {Complex \& Intelligent Systems},
+  publisher = {Springer Science and Business Media LLC},
+  author = {Liu,  Shuai and Liu,  Dongye and Srivastava,  Gautam and Połap,  Dawid and Woźniak,  Marcin},
+  year = {2020},
+  month = jun,
+  pages = {1895–1917}
+}
+
+% --- Konkretne algorytmy ---
+
+@inproceedings{viola2001rapid,
+  author    = {Viola, Paul and Jones, Michael},
+  title     = {Rapid object detection using a boosted cascade of simple features},
+  booktitle = {Proceedings of the 2001 IEEE Computer Society Conference on Computer Vision and Pattern Recognition. CVPR 2001},
+  volume    = {1},
+  pages     = {I--511--I--518 vol.1},
+  year      = {2001},
+  organization = {IEEE},
+  doi       = {10.1109/CVPR.2001.990517},
+  note      = {Oryginalna praca o kaskadach Haara (Viola-Jones)}
+}
+
+@inproceedings{liu2016ssd,
+  author    = {Liu, Wei and Anguelov, Dragomir and Erhan, Dumitru and Szegedy, Christian and Reed, Scott and Fu, Cheng-Yang and Berg, Alexander C.},
+  title     = {SSD: Single Shot MultiBox Detector},
+  booktitle = {European conference on computer vision},
+  pages     = {21--37},
+  year      = {2016},
+  organization = {Springer, Cham},
+  doi       = {10.1007/978-3-319-46448-0_2}
+}
+
+@inproceedings{ren2015faster,
+ author = {Ren, Shaoqing and He, Kaiming and Girshick, Ross and Sun, Jian},
+ booktitle = {Advances in Neural Information Processing Systems},
+ editor = {C. Cortes and N. Lawrence and D. Lee and M. Sugiyama and R. Garnett},
+ pages = {},
+ publisher = {Curran Associates, Inc.},
+ title = {Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks},
+ url = {https://proceedings.neurips.cc/paper_files/paper/2015/file/14bfa6bb14875e45bba028a21ed38046-Paper.pdf},
+ volume = {28},
+ year = {2015}
+}
+
+%   author        = {Howard, Andrew G. and Zhu, Menglong and Chen, Bo and Kalenichenko, Dmitry and Wang, Weijun and Weyand, Tobias and Andreetto, Marco and Adam, Hartwig},
+@article{howard2017mobilenets,
+  author        = {Howard, Andrew G. and Zhu, Menglong and Chen, Bo and Kalenichenko, Dmitry and Wang, Weijun and Weyand},
+  title         = {MobileNets: Efficient Convolutional Neural Networks for Mobile Vision Applications},
+  journal       = {arXiv preprint arXiv:1704.04861},
+  year          = {2017},
+  eprint        = {1704.04861},
+  archiveprefix = {arXiv},
+  primaryclass  = {cs.CV}
+}
+
+@inproceedings{bewley2016sort,
+  author    = {Bewley, Alex and Ge, Zongyuan and Ott, Lionel and Ramos, Fabio and Upcroft, Ben},
+  title     = {Simple online and realtime tracking},
+  booktitle = {2016 IEEE International Conference on Image Processing (ICIP)},
+  pages     = {3464--3468},
+  year      = {2016},
+  organization = {IEEE},
+  doi       = {10.1109/ICIP.2016.7533003}
+}
+
+@inproceedings{wojke2017deepsort,
+  author    = {Wojke, Nicolai and Bewley, Alex and Paulus, Dietrich},
+  title     = {Simple online and realtime tracking with a deep association metric},
+  booktitle = {2017 IEEE International Conference on Image Processing (ICIP)},
+  pages     = {3645--3649},
+  year      = {2017},
+  organization = {IEEE},
+  doi       = {10.1109/ICIP.2017.8296962}
+}
+
+% --- Strony internetowe i dokumentacje (jako misc) ---
+
+@misc{dji_website,
+  author       = {{DJI Technology Co., Ltd.}},
+  title        = {DJI - Official Website},
+  howpublished = {\url{https://www.dji.com/}},
+  year         = {2025},
+  note         = {Dostęp uzyskano 2025-04-30. Strona producenta dronów komercyjnych z funkcjami śledzenia.}
+}
+
+@misc{anduril_website,
+  author       = {{Anduril Industries}},
+  title        = {Anduril - Autonomus Systems},
+  howpublished = {\url{https://www.anduril.com/}}, % Można podać link do konkretnego produktu jak Bolt, jeśli dostępny
+  year         = {2025},
+  note         = {Dostęp uzyskano 2025-04-30. Strona producenta systemów autonomicznych dla sektora obronnego.}
+}
+

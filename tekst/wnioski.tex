@@ -1,0 +1,41 @@
+\section{Wnioski}
+
+\subsection{Sekcja programistyczna}
+
+Przeprowadzona analiza algorytmów wizyjnych wykazała, że istnieją znaczące różnice w ich skuteczności i wydajności, co znacząco wpływa na ich zastosowanie w systemach pokładowych bezzałogowych statków powietrznych.
+
+Algorytm \texttt{yolov4} zapewnił wysoką dokładność wykrywania obiektów, lecz jego wydajność była niewystarczająca do zastosowań w czasie rzeczywistym. Długi czas przetwarzania pojedynczej klatki uniemożliwia płynne śledzenie obiektów, co czyni go niepraktycznym dla obecnie dobranych komponentów -- komputera Raspberry Pi 5. Może to być podstawą do ulepszenia sprzętu -- np. dołączenia do niego modułu \textit{AI Hat} od firmy \textit{Hailo}.
+
+Algorytm \texttt{yolov4-tiny}, będący uproszczoną wersją \texttt{yolov4}, działał znacznie szybciej, co teoretycznie pozwalałoby na śledzenie obiektów w czasie rzeczywistym. Jednak jego dokładność była niższa – w szczególności sieć miała trudności z prawidłową klasyfikacją niektórych obiektów, co mogłoby prowadzić do błędnych decyzji w autonomicznym systemie nawigacyjnym.
+
+Najbardziej wydajnym rozwiązaniem okazały się kaskady Haara, które zapewniły bardzo szybkie przetwarzanie obrazu. Ich dokładność była jednak ograniczona do wykrywania określonych wzorców, co może stanowić problem w przypadku bardziej złożonych scenariuszy śledzenia obiektów o różnorodnych kształtach i teksturach.
+
+Podsumowując, wybór odpowiedniego algorytmu zależy od kompromisu między dokładnością a wydajnością. Dla zastosowań w dronach fundamentalne jest zapewnienie dostatecznej szybkości przetwarzania, co sugeruje konieczność dalszej analizy metod optymalizacji modeli głębokiego uczenia lub rozważenie alternatywnych podejść, takich jak na przykład wykorzystanie sieci neuronowych zoptymalizowanych pod kątem systemów wbudowanych.
+
+\subsection{Sekcja mechaniczna}
+
+Zaprojektowany jednoosiowy gimbal stanowi prostą, lecz funkcjonalną konstrukcję umożliwiającą śledzenie obiektów wykrytych przez system wizyjny. Jego modułowa budowa oraz dostosowanie do technologii druku 3D pozwalają na łatwe wytworzenie i montaż, co zwiększa elastyczność projektu i umożliwia szybkie iteracje w przypadku konieczności modyfikacji.
+
+Integracja gimbala z ramą drona \textit{TBS Source One} została zaplanowana w sposób minimalizujący konieczność ingerencji w strukturę samej ramy. Wykorzystanie istniejących punktów mocowania (śrub tulei dystansowych) pozwala na stabilne i trwałe przymocowanie uchwytu kamery bez osłabiania konstrukcji nośnej drona.
+
+Zastosowanie łożysk \texttt{686 2Z 6x13x5} oraz śruby pasowanej \texttt{ISO 7379-6-M5-30} w mechanizmie obrotu gimbala zapewnia płynność ruchu oraz redukcję luzów, co umożliwi precyzyjne śledzenie obiektów. 
+
+Podsumowując, opracowana konstrukcja gimbala stanowi solidną bazę do dalszej optymalizacji. Możliwe kierunki ulepszeń obejmują zastosowanie silnika BLDC z enkoderem, bądź zapewnienie systemu tłumienia drgań drona, w celu uzyskania lepszej jakości obrazu.
+
+\section{Plan dalszych prac}
+
+% Serwomechanizm sterowany będzie przez komputer Raspberry Pi 5, który będzie przesyłał informację o koniecznym obrocie kamery do płytki \texttt{STM32F411E-Disco}, która będzie sterować serwem, w celu zapewnienia płynnych przebiegów sygnału \texttt{PWM}.
+
+Zaproponowana konstrukcja stanowi dobrą platformę do testów algorytmów śledzenia i detekcji.
+
+Dalsze kroki mogą obejmować: \begin{itemize}
+    \item stworzenie własnego algorytmu detekcji obiektów
+    \item porównanie innych algorytmów śledzenia i detekcji, umożliwiając płynną pracę algorytmu na zaproponowanym sprzęcie
+    \item zaprogramowanie śledzenia w dwóch osiach, jednej realizowanej za pośrednictwem gimbala, a drugiej za pomocą drona
+    \item stworzenie programu umożliwiającego lądowanie drona na platformach ruchomych, używając np. kodów QR
+\end{itemize}
+
+Dokładny wybór ścieżki rozwoju projektu zostanie podjęty wraz z postępem prac oraz dostępnością drona do przeprowadzania testów.
+
+\textit{\textbf{TODO: Stale formatowanie przeglądu wiedzy (imiona i nazwiska)
+Przy publikacjach jak jest w jakimś czasopiśmie to ono kursywą, ale nazwę publikacji już nie}}
