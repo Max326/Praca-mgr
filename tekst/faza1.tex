@@ -1,6 +1,8 @@
 \section{Detekcja}
 
-Zdecydowałem się na detekcję piłki do piłki nożnej bo jest to prosty obiekt który nie będzie wymagał dużego nakładu pracy a nauczę się jak budować dataset i uczyć sieć. Wybrałem yolov8 bo jest proste w użyciu i dobrze działa.
+Zdecydowałem się na detekcję piłki do piłki nożnej bo jest to prosty obiekt który 
+nie będzie wymagał dużego nakładu pracy a nauczę się jak budować dataset i uczyć sieć. 
+Wybrałem yolov8 bo jest proste w użyciu i dobrze działa.
 
 yolo z ultralytics -> pc -> 110-140fps, rpi?
 
@@ -10,4 +12,91 @@ ncnn + ryzen 5 3600 -> ~22fps
 
 ncnn + rpi5 bez hat kita ~10-11fps
 
-zabrałem się za stworzenie gimbala w symulacji, żeby móc symulować śledzenie obiektów przez drona przy użyciu gimbala i bez konieczności jeżdżenia na testy
+Zabrałem się za stworzenie gimbala w symulacji, żeby móc symulować śledzenie obiektów 
+przez drona przy użyciu gimbala i bez konieczności jeżdżenia na testy
+
+
+Pomysły na dalsze prace:
+\begin{itemize}
+    \item śledzenie w symulacji aruco markerów z ruchomym gimbalem
+    \item odpalanie detekcji tylko co n klatek
+    \item KCF
+    \item KCF + Detekcja
+\end{itemize}
+    
+\section{Kinematyka}
+
+Pitch liczony zgodnie z kartezjańskim układem współrzędnych, gdzie oś Z jest skierowana w górę.
+Czyli dodatni pitch oznacza, że dron jest pochylony do przodu.
+
+\begin{itemize}
+    \item $h$ - wysokość drona nad ziemią
+    \item $\alpha_{drone}$ - kąt pitch drona
+    \item $\alpha_{gimbal}$ - kąt pitch gimbala
+    \item $\gamma$ - yaw drona
+    \item $d_{ground}$ - odległość na ziemi od punktu pod dronem do punktu na ziemi, na który patrzy kamera
+    \item $r$ - odległość od drona do punktu na ziemi, na który patrzy kamera
+    \item $\epsilon$ - pole widzenia kamery w poziomie
+    \item $\sigma$ - pole widzenia kamery w pionie
+    \item $x$ - szerokość obrazu z kamery w pikselach
+\end{itemize}
+
+Dystans po ziemi:
+
+\begin{equation}
+    \frac{h}{d_{ground}} = \tan(\alpha_{drone} + \alpha_{gimbal})
+\end{equation}
+
+\begin{equation}
+    d_{ground} = \frac{h}{\tan(\alpha_{drone} + \alpha_{gimbal})}
+\end{equation}
+
+Yaw:
+
+% Wektor od drona do punktu na ziemi w celu skalowania:
+% \begin{equation}
+%     \sin(\alpha) = \frac{h}{r}
+% \end{equation}
+
+% \begin{equation}
+%     r = \frac{h}{\sin(\alpha)}
+% \end{equation}
+
+Różnica w yaw drona dla odległości poziomej $dx$ obiektu od środka osi symetrii obrazu z kamery:
+
+\begin{equation}
+    \frac{dx}{x} = \frac{d \gamma}{\epsilon} % \tan(d \gamma)
+\end{equation}
+
+\begin{equation}
+    d \gamma = \frac{dx \cdot \epsilon}{x}
+\end{equation}
+
+Co dla omawianego przypadku, gdzie pole widzenia kamery w poziomie wynosi $100^o$,
+a szerokość obrazu z kamery w pikselach to $640$, daje:
+
+\begin{equation}
+    d \gamma = \frac{dx \cdot 100^o}{640}
+\end{equation}
+
+Trzeba jakoś zrealizować zatrzymywanie na określonej odległości od obiektu.
+
+Dla cofania (kiedy gimbal osiąga maksymalny kąt pitch w dół):
+
+\begin{equation}
+    \frac{d}{h} = \tan (\frac{\sigma}{2})
+\end{equation}
+
+\begin{equation}
+    d = h \tan (\frac{\sigma}{2})
+\end{equation}
+
+A więc
+
+\begin{equation}
+    \frac{dy_{px}}{480/2} = \frac{dy_m}{d_m}
+\end{equation}
+
+\begin{equation}
+    dy_m = \frac{d_m \cdot dy_{px}}{480/2}
+\end{equation}

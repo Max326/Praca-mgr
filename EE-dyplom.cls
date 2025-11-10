@@ -139,10 +139,10 @@
 \else
     \RequirePackage[MeX]{polski}
     \ifnum\strcmp{\locallang}{PL} = 0 
-        \RequirePackage[latin,english,polish]{babel}
+        \RequirePackage[english,polish]{babel}
         \selectlanguage{polish}
     \else
-        \RequirePackage[latin,polish,english]{babel}
+        \RequirePackage[polish,english]{babel}
         \selectlanguage{english}
     \fi
     \RequirePackage[utf8]{inputenc}

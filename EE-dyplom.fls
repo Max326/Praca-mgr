@@ -122,9 +122,6 @@ INPUT /usr/share/texlive/texmf-dist/tex/latex/polski/polski.sty
 INPUT /usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
 INPUT /usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
 INPUT /usr/share/texlive/texmf-dist/tex/generic/babel/txtbabel.def
-INPUT ./latin.ldf
-INPUT ./latin.ldf
-INPUT latin.ldf
 INPUT /usr/share/texlive/texmf-dist/tex/generic/babel-english/english.ldf
 INPUT /usr/share/texlive/texmf-dist/tex/generic/babel-english/english.ldf
 INPUT /usr/share/texlive/texmf-dist/tex/generic/babel-english/english.ldf
@@ -139,10 +136,6 @@ INPUT /usr/share/texlive/texmf-dist/tex/generic/babel/locale/en/babel-english.te
 INPUT /usr/share/texlive/texmf-dist/tex/generic/babel/locale/en/babel-english.tex
 INPUT /usr/share/texlive/texmf-dist/tex/generic/babel/locale/en/babel-english.tex
 INPUT /usr/share/texlive/texmf-dist/tex/generic/babel/locale/en/babel-en.ini
-INPUT /usr/share/texlive/texmf-dist/tex/generic/babel/locale/la/babel-latin.tex
-INPUT /usr/share/texlive/texmf-dist/tex/generic/babel/locale/la/babel-latin.tex
-INPUT /usr/share/texlive/texmf-dist/tex/generic/babel/locale/la/babel-latin.tex
-INPUT /usr/share/texlive/texmf-dist/tex/generic/babel/locale/la/babel-la.ini
 INPUT /usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
@@ -707,6 +700,7 @@ INPUT ./tekst/faza1.tex
 INPUT ./tekst/faza1.tex
 INPUT ./tekst/faza1.tex
 INPUT tekst/faza1.tex
+INPUT /usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc
 INPUT /usr/share/texmf/tex/latex/lm/t1lmr.fd
 INPUT /usr/share/texmf/tex/latex/lm/t1lmr.fd
 INPUT /usr/share/texmf/tex/latex/lm/t1lmr.fd
@@ -723,6 +717,7 @@ OUTPUT EE-dyplom.run.xml
 INPUT /usr/share/texmf/fonts/type1/public/lm/lmcsc10.pfb
 INPUT /usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb
 INPUT /usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb
+INPUT /usr/share/texmf/fonts/type1/public/lm/lmr10.pfb
 INPUT /usr/share/texmf/fonts/type1/public/lm/lmss10.pfb
 INPUT /usr/share/texmf/fonts/type1/public/lm/lmss12.pfb
 INPUT /usr/share/texmf/fonts/type1/public/lm/lmss17.pfb

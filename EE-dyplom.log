@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.11.5)  5 NOV 2025 21:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.11.5)  10 NOV 2025 15:33
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -319,7 +319,7 @@ Package: babel 2024/01/07 v24.1 The Babel package
  (/usr/share/texlive/texmf-dist/tex/generic/babel/txtbabel.def)
 \bbl@readstream=\read2
 \bbl@dirlevel=\count303
- (./latin.ldf) (/usr/share/texlive/texmf-dist/tex/generic/babel-english/english.ldf
+ (/usr/share/texlive/texmf-dist/tex/generic/babel-english/english.ldf
 Language: english 2017/06/06 v3.3r English support from the babel system
 Package babel Info: Hyphen rules for 'british' set to \l@english
 (babel)             (\language0). Reported on input line 82.
@@ -340,9 +340,6 @@ Package babel Info: Importing font and identification data for polish
 ) (/usr/share/texlive/texmf-dist/tex/generic/babel/locale/en/babel-english.tex
 Package babel Info: Importing font and identification data for english
 (babel)             from babel-en.ini. Reported on input line 11.
-) (/usr/share/texlive/texmf-dist/tex/generic/babel/locale/la/babel-latin.tex
-Package babel Info: Importing font and identification data for latin
-(babel)             from babel-la.ini. Reported on input line 9.
 ) (/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2021/02/14 v1.3d Input encoding file
 \inpenc@prehook=\toks40
@@ -1298,13 +1295,6 @@ Package biblatex Info: ... file 'english.lbx' found.
  (/usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/english.lbx
 File: english.lbx 2023/03/05 v3.19 biblatex localization (PK/MW)
 )
-Package biblatex Info: Trying to load language 'latin'...
-Package biblatex Info: ... file 'latin.lbx' not found.
-
-
-Package biblatex Warning: Language 'latin' not supported.
-(biblatex)                Using dummy definitions on input line 95.
-
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Automatic encoding selection.
 (biblatex)             Assuming data encoding 'utf8'.
@@ -1312,7 +1302,7 @@ Package biblatex Info: Automatic encoding selection.
 
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'EE-dyplom.bbl' found.
-(./EE-dyplom.bbl)
+ (./EE-dyplom.bbl)
 Package biblatex Info: Reference section=0 on input line 95.
 Package biblatex Info: Reference segment=0 on input line 95.
 Package caption Info: Begin \AtBeginDocument code.
@@ -1345,12 +1335,12 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
 \c@lstlisting=\count524
-<gfx/HeadeitiPL.png, id=103, 1927.2pt x 371.3875pt>
+<gfx/HeadeitiPL.png, id=107, 1927.2pt x 371.3875pt>
 File: gfx/HeadeitiPL.png Graphic file (type png)
 <use gfx/HeadeitiPL.png>
 Package pdftex.def Info: gfx/HeadeitiPL.png  used on input line 98.
 (pdftex.def)             Requested size: 455.24411pt x 87.72942pt.
-<gfx/mgrhead.png, id=104, 1392.20125pt x 303.1325pt>
+<gfx/mgrhead.png, id=108, 1392.20125pt x 303.1325pt>
 File: gfx/mgrhead.png Graphic file (type png)
 <use gfx/mgrhead.png>
 Package pdftex.def Info: gfx/mgrhead.png  used on input line 98.
@@ -1361,19 +1351,14 @@ Package pdftex.def Info: gfx/mgrhead.png  used on input line 98.
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc} <./gfx/HeadEITIPL.png> <./gfx/mgrhead.png (PNG copy)>] [2
 
-]
-
-Package lipsum Warning: Unknown language 'latin'. Hyphenation patterns for
-(lipsum)                'polish' will be used instead.
-
-[3] [4
+] [3] [4
 
 ] [5
 
 ] [6
 
 ]
-<gfx/oswiadczenie_autora_pracy.pdf, id=135, 597.55246pt x 845.07718pt>
+<gfx/oswiadczenie_autora_pracy.pdf, id=139, 597.55246pt x 845.07718pt>
 File: gfx/oswiadczenie_autora_pracy.pdf Graphic file (type pdf)
 <use gfx/oswiadczenie_autora_pracy.pdf>
 Package pdftex.def Info: gfx/oswiadczenie_autora_pracy.pdf  used on input line 98.
@@ -1450,123 +1435,125 @@ Underfull \hbox (badness 10000) in paragraph at lines 20--23
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <10.95> not available
 (Font)              Font shape `T1/lmss/m/sl' tried instead on input line 25.
 [12]) (./tekst/przebieg.tex
-<rysunki/zdjecia/medlin1.png, id=283, 765.6103pt x 574.39594pt>
+<rysunki/zdjecia/medlin1.png, id=289, 765.6103pt x 574.39594pt>
 File: rysunki/zdjecia/medlin1.png Graphic file (type png)
 <use rysunki/zdjecia/medlin1.png>
 Package pdftex.def Info: rysunki/zdjecia/medlin1.png  used on input line 9.
 (pdftex.def)             Requested size: 218.51521pt x 163.94118pt.
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <10> not available
 (Font)              Font shape `T1/lmss/m/sl' tried instead on input line 10.
-<rysunki/zdjecia/medlin2.png, id=285, 844.65562pt x 633.86812pt>
+<rysunki/zdjecia/medlin2.png, id=291, 844.65562pt x 633.86812pt>
 File: rysunki/zdjecia/medlin2.png Graphic file (type png)
 <use rysunki/zdjecia/medlin2.png>
 Package pdftex.def Info: rysunki/zdjecia/medlin2.png  used on input line 14.
 (pdftex.def)             Requested size: 218.51521pt x 163.97969pt.
-<rysunki/zdjecia/gimbalzeby.png, id=286, 825.83531pt x 529.22719pt>
+<rysunki/zdjecia/gimbalzeby.png, id=292, 825.83531pt x 529.22719pt>
 File: rysunki/zdjecia/gimbalzeby.png Graphic file (type png)
 <use rysunki/zdjecia/gimbalzeby.png>
 Package pdftex.def Info: rysunki/zdjecia/gimbalzeby.png  used on input line 23.
 (pdftex.def)             Requested size: 227.62206pt x 145.86497pt.
  [13 <./rysunki/zdjecia/medlin1.png> <./rysunki/zdjecia/medlin2.png>]
-<rysunki/zdjecia/diygimbal.png, id=296, 425.33907pt x 366.61969pt>
+<rysunki/zdjecia/diygimbal.png, id=302, 425.33907pt x 366.61969pt>
 File: rysunki/zdjecia/diygimbal.png Graphic file (type png)
 <use rysunki/zdjecia/diygimbal.png>
 Package pdftex.def Info: rysunki/zdjecia/diygimbal.png  used on input line 31.
 (pdftex.def)             Requested size: 227.62206pt x 196.19833pt.
  [14 <./rysunki/zdjecia/gimbalzeby.png> <./rysunki/zdjecia/diygimbal.png>]
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 40.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 41.
  (/usr/share/texmf/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-<rysunki/twarz/yolov4_1.png, id=306, 481.8pt x 361.35pt>
+<rysunki/twarz/yolov4_1.png, id=312, 481.8pt x 361.35pt>
 File: rysunki/twarz/yolov4_1.png Graphic file (type png)
 <use rysunki/twarz/yolov4_1.png>
-Package pdftex.def Info: rysunki/twarz/yolov4_1.png  used on input line 53.
+Package pdftex.def Info: rysunki/twarz/yolov4_1.png  used on input line 56.
 (pdftex.def)             Requested size: 218.51521pt x 163.88518pt.
-<rysunki/twarz/yolov4_2.png, id=307, 481.8pt x 361.35pt>
+<rysunki/twarz/yolov4_2.png, id=313, 481.8pt x 361.35pt>
 File: rysunki/twarz/yolov4_2.png Graphic file (type png)
 <use rysunki/twarz/yolov4_2.png>
-Package pdftex.def Info: rysunki/twarz/yolov4_2.png  used on input line 58.
+Package pdftex.def Info: rysunki/twarz/yolov4_2.png  used on input line 61.
 (pdftex.def)             Requested size: 218.51521pt x 163.88518pt.
-<rysunki/twarz/tiny1.png, id=308, 481.8pt x 361.35pt>
+<rysunki/twarz/tiny1.png, id=314, 481.8pt x 361.35pt>
 File: rysunki/twarz/tiny1.png Graphic file (type png)
 <use rysunki/twarz/tiny1.png>
-Package pdftex.def Info: rysunki/twarz/tiny1.png  used on input line 76.
+Package pdftex.def Info: rysunki/twarz/tiny1.png  used on input line 81.
 (pdftex.def)             Requested size: 218.51521pt x 163.88518pt.
-<rysunki/twarz/tiny2.png, id=309, 481.8pt x 361.35pt>
+<rysunki/twarz/tiny2.png, id=315, 481.8pt x 361.35pt>
 File: rysunki/twarz/tiny2.png Graphic file (type png)
 <use rysunki/twarz/tiny2.png>
-Package pdftex.def Info: rysunki/twarz/tiny2.png  used on input line 81.
+Package pdftex.def Info: rysunki/twarz/tiny2.png  used on input line 86.
 (pdftex.def)             Requested size: 218.51521pt x 163.88518pt.
  [15{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc} <./rysunki/twarz/yolov4_1.png> <./rysunki/twarz/yolov4_2.png>]
-<rysunki/twarz/haar1.png, id=320, 481.8pt x 361.35pt>
+<rysunki/twarz/haar1.png, id=326, 481.8pt x 361.35pt>
 File: rysunki/twarz/haar1.png Graphic file (type png)
 <use rysunki/twarz/haar1.png>
-Package pdftex.def Info: rysunki/twarz/haar1.png  used on input line 94.
+Package pdftex.def Info: rysunki/twarz/haar1.png  used on input line 99.
 (pdftex.def)             Requested size: 218.51521pt x 163.88518pt.
-<rysunki/twarz/haar2.png, id=321, 481.8pt x 361.35pt>
+<rysunki/twarz/haar2.png, id=327, 481.8pt x 361.35pt>
 File: rysunki/twarz/haar2.png Graphic file (type png)
 <use rysunki/twarz/haar2.png>
-Package pdftex.def Info: rysunki/twarz/haar2.png  used on input line 99.
+Package pdftex.def Info: rysunki/twarz/haar2.png  used on input line 104.
 (pdftex.def)             Requested size: 218.51521pt x 163.88518pt.
  [16 <./rysunki/twarz/tiny1.png> <./rysunki/twarz/tiny2.png> <./rysunki/twarz/haar1.png> <./rysunki/twarz/haar2.png>]
-<rysunki/zdjecia/djiair3.jpg, id=333, 451.6875pt x 207.77625pt>
+<rysunki/zdjecia/djiair3.jpg, id=339, 451.6875pt x 207.77625pt>
 File: rysunki/zdjecia/djiair3.jpg Graphic file (type jpg)
 <use rysunki/zdjecia/djiair3.jpg>
-Package pdftex.def Info: rysunki/zdjecia/djiair3.jpg  used on input line 119.
+Package pdftex.def Info: rysunki/zdjecia/djiair3.jpg  used on input line 124.
 (pdftex.def)             Requested size: 227.62206pt x 104.70898pt.
-<rysunki/zdjecia/andurilbolt.png, id=334, 963.6pt x 542.025pt>
+<rysunki/zdjecia/andurilbolt.png, id=340, 963.6pt x 542.025pt>
 File: rysunki/zdjecia/andurilbolt.png Graphic file (type png)
 <use rysunki/zdjecia/andurilbolt.png>
-Package pdftex.def Info: rysunki/zdjecia/andurilbolt.png  used on input line 127.
+Package pdftex.def Info: rysunki/zdjecia/andurilbolt.png  used on input line 132.
 (pdftex.def)             Requested size: 227.62206pt x 128.03754pt.
  [17 <./rysunki/zdjecia/djiair3.jpg> <./rysunki/zdjecia/andurilbolt.png (PNG copy)>]
-<rysunki/zdjecia/tbscut.jpg, id=341, 539.01375pt x 369.63094pt>
+<rysunki/zdjecia/tbscut.jpg, id=347, 539.01375pt x 369.63094pt>
 File: rysunki/zdjecia/tbscut.jpg Graphic file (type jpg)
 <use rysunki/zdjecia/tbscut.jpg>
-Package pdftex.def Info: rysunki/zdjecia/tbscut.jpg  used on input line 169.
+Package pdftex.def Info: rysunki/zdjecia/tbscut.jpg  used on input line 174.
 (pdftex.def)             Requested size: 227.62206pt x 156.09558pt.
-<rysunki/zdjecia/cammount1.png, id=342, 433.62pt x 383.93437pt>
+<rysunki/zdjecia/cammount1.png, id=348, 433.62pt x 383.93437pt>
 File: rysunki/zdjecia/cammount1.png Graphic file (type png)
 <use rysunki/zdjecia/cammount1.png>
-Package pdftex.def Info: rysunki/zdjecia/cammount1.png  used on input line 179.
+Package pdftex.def Info: rysunki/zdjecia/cammount1.png  used on input line 184.
 (pdftex.def)             Requested size: 218.51521pt x 193.47816pt.
-<rysunki/zdjecia/cammount2.png, id=343, 518.6878pt x 388.45125pt>
+<rysunki/zdjecia/cammount2.png, id=349, 518.6878pt x 388.45125pt>
 File: rysunki/zdjecia/cammount2.png Graphic file (type png)
 <use rysunki/zdjecia/cammount2.png>
-Package pdftex.def Info: rysunki/zdjecia/cammount2.png  used on input line 184.
+Package pdftex.def Info: rysunki/zdjecia/cammount2.png  used on input line 189.
 (pdftex.def)             Requested size: 218.51521pt x 163.65222pt.
  [18 <./rysunki/zdjecia/tbscut.jpg>]
-<rysunki/zdjecia/servomnt1.png, id=349, 414.79968pt x 485.56406pt>
+<rysunki/zdjecia/servomnt1.png, id=355, 414.79968pt x 485.56406pt>
 File: rysunki/zdjecia/servomnt1.png Graphic file (type png)
 <use rysunki/zdjecia/servomnt1.png>
-Package pdftex.def Info: rysunki/zdjecia/servomnt1.png  used on input line 193.
+Package pdftex.def Info: rysunki/zdjecia/servomnt1.png  used on input line 198.
 (pdftex.def)             Requested size: 227.62206pt x 266.4535pt.
-<rysunki/zdjecia/lozyskowanie.png, id=350, 651.93562pt x 251.43938pt>
+<rysunki/zdjecia/lozyskowanie.png, id=356, 651.93562pt x 251.43938pt>
 File: rysunki/zdjecia/lozyskowanie.png Graphic file (type png)
 <use rysunki/zdjecia/lozyskowanie.png>
-Package pdftex.def Info: rysunki/zdjecia/lozyskowanie.png  used on input line 201.
+Package pdftex.def Info: rysunki/zdjecia/lozyskowanie.png  used on input line 206.
 (pdftex.def)             Requested size: 341.43307pt x 131.6892pt.
  [19 <./rysunki/zdjecia/cammount1.png> <./rysunki/zdjecia/cammount2.png> <./rysunki/zdjecia/servomnt1.png>]
-<rysunki/zdjecia/gimbalmoj1.png, id=361, 457.71pt x 442.65375pt>
+<rysunki/zdjecia/gimbalmoj1.png, id=367, 457.71pt x 442.65375pt>
 File: rysunki/zdjecia/gimbalmoj1.png Graphic file (type png)
 <use rysunki/zdjecia/gimbalmoj1.png>
-Package pdftex.def Info: rysunki/zdjecia/gimbalmoj1.png  used on input line 211.
+Package pdftex.def Info: rysunki/zdjecia/gimbalmoj1.png  used on input line 216.
 (pdftex.def)             Requested size: 218.51521pt x 211.32314pt.
-<rysunki/zdjecia/gimbalmoj2.png, id=362, 553.31718pt x 567.62062pt>
+<rysunki/zdjecia/gimbalmoj2.png, id=368, 553.31718pt x 567.62062pt>
 File: rysunki/zdjecia/gimbalmoj2.png Graphic file (type png)
 <use rysunki/zdjecia/gimbalmoj2.png>
-Package pdftex.def Info: rysunki/zdjecia/gimbalmoj2.png  used on input line 216.
+Package pdftex.def Info: rysunki/zdjecia/gimbalmoj2.png  used on input line 221.
 (pdftex.def)             Requested size: 218.51521pt x 224.16003pt.
-<rysunki/zdjecia/gimbaldruk.jpg, id=363, 1505.625pt x 1201.48875pt>
+<rysunki/zdjecia/gimbaldruk.jpg, id=369, 1505.625pt x 1201.48875pt>
 File: rysunki/zdjecia/gimbaldruk.jpg Graphic file (type jpg)
 <use rysunki/zdjecia/gimbaldruk.jpg>
-Package pdftex.def Info: rysunki/zdjecia/gimbaldruk.jpg  used on input line 224.
+Package pdftex.def Info: rysunki/zdjecia/gimbaldruk.jpg  used on input line 229.
 (pdftex.def)             Requested size: 182.09486pt x 145.30908pt.
  [20 <./rysunki/zdjecia/lozyskowanie.png> <./rysunki/zdjecia/gimbalmoj1.png> <./rysunki/zdjecia/gimbalmoj2.png>] [21{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc} <./rysunki/zdjecia/gimbaldruk.jpg>]) (./tekst/wnioski.tex [22]
 LaTeX Font Info:    Font shape `T1/lmss/bx/it' in size <10.95> not available
 (Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 41.
-) (./tekst/faza1.tex)) [23] [24]
+) (./tekst/faza1.tex [23] [24{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}])) [25] [26
+
+]
 LaTeX Font Info:    Trying to load font information for T1+lmr on input line 106.
  (/usr/share/texmf/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
@@ -1575,44 +1562,43 @@ File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 LaTeX Font Warning: Font shape `T1/lmss/m/sc' in size <10.95> not available
 (Font)              Font shape `T1/lmr/m/sc' tried instead on input line 106.
 
-[25
-
-
-] [26]
-No file EE-dyplom.acr.
-No file EE-dyplom.sls.
 [27
 
-] [28
+] [28]
+No file EE-dyplom.acr.
+No file EE-dyplom.sls.
+[29
+
+] [30
 
 ] (./EE-dyplom.lof)
 \tf@lof=\write11
 \openout11 = `EE-dyplom.lof'.
 
- [29] (./EE-dyplom.aux)
+ [31] (./EE-dyplom.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
 Package rerunfilecheck Info: File `EE-dyplom.out' has not changed.
-(rerunfilecheck)             Checksum: 6241E66F068BEE9758E289E119DCD5AD;2695.
+(rerunfilecheck)             Checksum: 90D65B78A9A4A11DF946E95A932931F1;2800.
 Package logreq Info: Writing requests to 'EE-dyplom.run.xml'.
 \openout1 = `EE-dyplom.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 42018 strings out of 476074
- 779038 string characters out of 5793137
+ 41989 strings out of 476074
+ 778393 string characters out of 5793137
  1938975 words of memory out of 5000000
- 63181 multiletter control sequences out of 15000+600000
+ 63147 multiletter control sequences out of 15000+600000
  618435 words of font info for 74 fonts, out of 8000000 for 9000
  79 hyphenation exceptions out of 8191
  114i,12n,131p,2386b,1848s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texmf/fonts/type1/public/lm/lmcsc10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/public/lm/lmss10.pfb></usr/share/texmf/fonts/type1/public/lm/lmss12.pfb></usr/share/texmf/fonts/type1/public/lm/lmss17.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbo10.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsso10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb>
-Output written on EE-dyplom.pdf (29 pages, 9711653 bytes).
+</usr/share/texmf/fonts/type1/public/lm/lmcsc10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmss10.pfb></usr/share/texmf/fonts/type1/public/lm/lmss12.pfb></usr/share/texmf/fonts/type1/public/lm/lmss17.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbo10.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsso10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb>
+Output written on EE-dyplom.pdf (31 pages, 9742069 bytes).
 PDF statistics:
- 564 PDF objects out of 1000 (max. 8388607)
- 443 compressed objects within 5 object streams
- 89 named destinations out of 1000 (max. 500000)
- 368 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 596 PDF objects out of 1000 (max. 8388607)
+ 471 compressed objects within 5 object streams
+ 101 named destinations out of 1000 (max. 500000)
+ 376 words of extra memory for PDF output out of 10000 (max. 10000000)
 

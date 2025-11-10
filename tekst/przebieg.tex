@@ -37,14 +37,17 @@ To rozwiązanie było znacznie bardziej zaawansowane, wymagało bowiem użycia s
 \newpage
 \section{Przegląd rozwiązań algorytmów wizyjnych} \label{sec:przeglad_wiz}
 
-W tym podrozdziale przeanalizowane zostały gotowe algorytmy służące do analizy obrazu. Do obsługi kamery została wykorzystana biblioteka \texttt{opencv}.
+W tym podrozdziale przeanalizowane zostały gotowe algorytmy służące do analizy obrazu. 
+Do obsługi kamery została wykorzystana biblioteka \texttt{opencv}.
 
-Najpierw przeanalizowany został algorytm \texttt{yolov4}. Pliki konieczne do uruchomienia, czyli: \begin{itemize}
+Najpierw przeanalizowany został algorytm \texttt{yolov4}. Pliki konieczne do uruchomienia, 
+czyli: \begin{itemize}
     \item \texttt{yolov4.weights}
     \item \texttt{yolov4.cfg}
     \item \texttt{coco.names}
 \end{itemize}
-zostały zaczerpnięte z \cite{yolo}. Poniżej przedstawione zostały zrzuty ekranu wykonane podczas działania programu.
+zostały zaczerpnięte z \cite{yolo}. Poniżej przedstawione zostały zrzuty ekranu wykonane 
+podczas działania programu.
 
 \begin{figure}[H]
     \centering
@@ -60,9 +63,11 @@ zostały zaczerpnięte z \cite{yolo}. Poniżej przedstawione zostały zrzuty ekr
     \end{minipage}
 \end{figure}
 
-Program działał bardzo powoli, wykonywała się 1 pętla programu na kilka sekund. Takie działanie programu uniemożliwiało śledzenie obiektów z dostateczną dokładnością.
+Program działał bardzo powoli, wykonywała się 1 pętla programu w ciągu kilku sekund. 
+Takie działanie programu uniemożliwiało śledzenie obiektów z dostateczną dokładnością.
 
-Następnie przeanalizowany został algorytm \texttt{yolov4-tiny}. Pliki konieczne do uruchomienia, a więc: 
+Następnie przeanalizowany został algorytm \texttt{yolov4-tiny}. 
+Pliki konieczne do uruchomienia, a więc: 
 \begin{itemize}
     \item \texttt{yolov4-tiny.weights}
     \item \texttt{yolov4-tiny.cfg}
